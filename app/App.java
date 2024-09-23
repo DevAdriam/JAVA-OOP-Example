@@ -2,6 +2,8 @@ package app;
 
 import java.util.Scanner;
 
+import abstraction.car.Car;
+import abstraction.car.Toyota;
 import inheritance.compositon.MyScanner;
 import inheritance.compositon.Printer;
 import inheritance.inheritance.rectangle;
@@ -21,5 +23,19 @@ public class App {
         Printer officePrinter = new Printer(officeScanner);
 
         officePrinter.Print("Enter your name : ");
+
+        // Abstraction
+        Toyota MyToyota = new Toyota("Toyota", "AA-79384");
+        MyToyota.Drive();
+
+        //anonymous class
+        Car toyota = new Car("Toyota","AA-0000"){
+            @Override
+            public void Drive() {
+                System.out.printf("%s %s is driving", carModel, carNumber);
+            }
+        };
+
+        toyota.Drive();
     }
 }
