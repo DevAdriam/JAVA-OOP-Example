@@ -32,10 +32,19 @@ public class App {
         Car toyota = new Car("Toyota","AA-0000"){
             @Override
             public void Drive() {
+                System.out.printf("%s %s is driving%n", carModel, carNumber);
+            }
+        };
+
+
+        Car hondaFit = new Car("HondaFit","BB-9323") {
+            @Override
+            public void Drive() {
                 System.out.printf("%s %s is driving", carModel, carNumber);
             }
         };
 
         toyota.Drive();
+        hondaFit.Drive();
     }
 }
